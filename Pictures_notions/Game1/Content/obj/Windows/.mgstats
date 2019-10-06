@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/Pictures_notions/Game1/Content/personnage.png","C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/Pictures_notions/Game1/Content/bin/Windows/personnage.xnb","TextureProcessor","Texture2DContent",2706,24373,0.448
+"C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/Pictures_notions/Game1/Content/slimePurple2.png","C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/Pictures_notions/Game1/Content/bin/Windows/slimePurple2.xnb","TextureProcessor","Texture2DContent",1955,21909,0.0259182
