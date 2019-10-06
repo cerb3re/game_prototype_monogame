@@ -17,14 +17,21 @@ namespace _3D_ISO
         List<Texture2D> lstTexture2D;
         List<Texture2D> lstTexture3D;
         TileMap myMap;
+        Vector2 map2DOrigin;
+        Vector2 map3DOrigin;
 
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
 
+            graphics.PreferredBackBufferWidth = 1024;
+            graphics.PreferredBackBufferHeight = 600;
+            graphics.ApplyChanges();
+
             myMap = new TileMap();
             myMap.set2DSize(32, 32);
+            myMap.set3DSize(32 * 2, 32 * 2);
 
             int[,] mapData = new int[,]
             {
@@ -41,6 +48,8 @@ namespace _3D_ISO
             };
 
             myMap.setData(mapData);
+            map2DOrigin = new Vector2(10, (graphics.PreferredBackBufferHeight / 2) - ((myMap.tileHeigth2D * myMap.mapHeight) / 2));
+            map3DOrigin = new Vector2(10 + map2DOrigin.Y * 2 + (myMap.tileWidth3D * (myMap.mapWidth / 2)), ((myMap.tileHeigth2D * myMap.mapHeight) / 2));
         }
 
         /// <summary>
@@ -118,7 +127,7 @@ namespace _3D_ISO
 
           
             spriteBatch.Begin();
-
+            // 2D TileMap
             for (int line = 0; line < myMap.mapWidth; line++)
             {
                 for (int column = 0; column < myMap.mapHeight; column++)
@@ -128,16 +137,38 @@ namespace _3D_ISO
                     {
                         int x = column * myMap.tileWidth2D;
                         int y = line * myMap.tileHeigth2D;
-
+                        Vector2 position = new Vector2(x, y);
                         Texture2D tx = lstTexture2D[id - 1];
                         if (tx != null)
                         {
-                            spriteBatch.Draw(tx, new Vector2(x, y), Color.White);
+                            position = position + map2DOrigin;
+                            spriteBatch.Draw(tx, position, Color.White);
                         }
                     }
                 }
             }
 
+            // 3D TileMap
+            for (int line = 0; line < myMap.mapWidth; line++)
+            {
+                for (int column = 0; column < myMap.mapHeight; column++)
+                {
+                    int id = myMap.getId(line, column);
+                    if (id >= 0)
+                    {
+                        int x = column * myMap.tileWidth2D;
+                        int y = line * myMap.tileHeigth2D;
+                        Vector2 position = new Vector2(x, y);
+                        position = myMap.to3D(position);
+                        Texture2D tx = lstTexture3D[id - 1];
+                        if (tx != null)
+                        {
+                            position = position + map3DOrigin;
+                            spriteBatch.Draw(tx, position, Color.White);
+                        }
+                    }
+                }
+            }
             spriteBatch.End();
 
             // TODO: Add your drawing code here

@@ -29,6 +29,16 @@ namespace _3D_ISO
             get;
             private set;
         }
+        public int tileWidth3D
+        {
+            get;
+            private set;
+        }
+        public int tileHeigth3D
+        {
+            get;
+            private set;
+        }
 
         private int[,] _data;
         
@@ -41,6 +51,12 @@ namespace _3D_ISO
         {
             tileWidth2D = pTileWidth;
             tileHeigth2D = pTileHeight;
+        }
+
+        public void set3DSize(int pTileWidth, int pTileHeight)
+        {
+            tileWidth3D = pTileWidth;
+            tileHeigth3D = pTileHeight;
         }
 
         public void setData(int[,] pArray)
@@ -57,6 +73,14 @@ namespace _3D_ISO
 
             Console.WriteLine("Error: the index of the map does not exist");
             return -1;
+        }
+
+        public Vector2 to3D(Vector2 pCoord2D)
+        {
+            Vector2 newCoord = new Vector2();
+            newCoord.X = pCoord2D.X - pCoord2D.Y;
+            newCoord.Y = (pCoord2D.X + pCoord2D.Y) / 2;
+            return newCoord;
         }
     }
 }
