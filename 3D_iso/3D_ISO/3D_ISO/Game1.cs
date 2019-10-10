@@ -49,7 +49,7 @@ namespace _3D_ISO
 
             myMap.setData(mapData);
             map2DOrigin = new Vector2(10, (graphics.PreferredBackBufferHeight / 2) - ((myMap.tileHeigth2D * myMap.mapHeight) / 2));
-            map3DOrigin = new Vector2(10 + map2DOrigin.Y * 2 + (myMap.tileWidth3D * (myMap.mapWidth / 2)), ((myMap.tileHeigth2D * myMap.mapHeight) / 2));
+            map3DOrigin = new Vector2(10 + (myMap.tileWidth2D * myMap.mapWidth) + (myMap.tileWidth3D * (myMap.mapWidth / 2)), ((myMap.tileHeigth2D * myMap.mapHeight) / 2));
         }
 
         /// <summary>

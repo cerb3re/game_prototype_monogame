@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/Rotations/Game1/Game1/Content/cube.fbx","C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/Rotations/Game1/Game1/Content/bin/Windows/cube.xnb","ModelProcessor","ModelContent",30092,1737,1,348165
+"C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/Rotations/Game1/Game1/Content/wall.jpg","C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/Rotations/Game1/Game1/Content/bin/Windows/wall_0.xnb","TextureProcessor","Texture2DContent",37102,1398221,0,8504734

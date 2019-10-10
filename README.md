@@ -2,5 +2,6 @@
 
 - 3D Isometric notions
 - Pictures notions
+- rotations notions
 
 `T.CHENIER @ 2019`
