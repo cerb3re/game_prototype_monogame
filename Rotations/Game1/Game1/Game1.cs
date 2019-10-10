@@ -78,8 +78,26 @@ namespace Game1
         {
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
+            KeyboardState state = Keyboard.GetState();
 
-            modelMatrix = modelMatrix * Matrix.CreateRotationY(0.01f);
+            Vector3 currentPosition = modelMatrix.Translation;
+
+            if (state.IsKeyDown(Keys.Right))
+                modelMatrix *= Matrix.CreateTranslation(new Vector3(0.1f, 0, 0));
+            if (state.IsKeyDown(Keys.Left))
+                modelMatrix *= Matrix.CreateTranslation(new Vector3(-0.1f, 0, 0));
+            if (state.IsKeyDown(Keys.Up))
+            {
+                modelMatrix.Translation = Vector3.Zero;
+                modelMatrix *= Matrix.CreateRotationY(0.1f);
+                modelMatrix.Translation = currentPosition;
+                
+            }
+            if (state.IsKeyDown(Keys.Down))
+                modelMatrix *= Matrix.CreateRotationY(-0.1f);
+            if (state.IsKeyDown(Keys.Z))
+                modelMatrix *= Matrix.CreateTranslation(modelMatrix.Forward);
+
 
             base.Update(gameTime);
         }
