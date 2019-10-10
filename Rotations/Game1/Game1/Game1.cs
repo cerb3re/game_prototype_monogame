@@ -46,6 +46,17 @@ namespace Game1
             spriteBatch = new SpriteBatch(GraphicsDevice);
  
             model = Content.Load<Model>("Cube");
+            view = Matrix.CreateLookAt(
+                new Vector3(0, 0, 10),
+                new Vector3(0, 0, 0),
+                Vector3.UnitY
+                );
+            projection = Matrix.CreatePerspectiveFieldOfView(
+                MathHelper.ToRadians(45f),
+                16f / 9f,
+                1f,
+                100f
+                );
             // TODO: use this.Content to load your game content here
         }
 
@@ -68,27 +79,15 @@ namespace Game1
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed || Keyboard.GetState().IsKeyDown(Keys.Escape))
                 Exit();
 
-            // TODO: Add your update logic here
-
             modelMatrix = modelMatrix * Matrix.CreateRotationY(0.01f);
-            view = Matrix.CreateLookAt(
-                new Vector3(0, 0, 10),
-                new Vector3(0, 0, 0),
-                Vector3.UnitY
-                );
-            projection = Matrix.CreatePerspectiveFieldOfView(
-                MathHelper.ToRadians(45f),
-                16f/9f,
-                1f,
-                100f
-                );
 
             base.Update(gameTime);
         }
 
         private void DrawModel(Model model, Matrix world, Matrix view, Matrix projection) 
         {
-            foreach(ModelMesh mesh in model.Meshes) 
+
+            foreach (ModelMesh mesh in model.Meshes) 
             {
                 foreach(BasicEffect effect in mesh.Effects)
                 {
