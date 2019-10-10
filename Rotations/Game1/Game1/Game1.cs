@@ -96,8 +96,13 @@ namespace Game1
             if (state.IsKeyDown(Keys.Down))
                 modelMatrix *= Matrix.CreateRotationY(-0.1f);
             if (state.IsKeyDown(Keys.Z))
-                modelMatrix *= Matrix.CreateTranslation(modelMatrix.Forward);
-
+                view *= Matrix.CreateTranslation(new Vector3(0, 0, 0.1f));
+            if (state.IsKeyDown(Keys.S))
+                view *= Matrix.CreateTranslation(new Vector3(0, 0, -0.1f));
+            if (state.IsKeyDown(Keys.Q))
+                view *= Matrix.CreateTranslation(new Vector3(0.1f, 0, 0));
+            if (state.IsKeyDown(Keys.D))
+                view *= Matrix.CreateTranslation(new Vector3(-0.1f, 0, 0));
 
             base.Update(gameTime);
         }
