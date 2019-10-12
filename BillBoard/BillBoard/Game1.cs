@@ -39,6 +39,10 @@ namespace BillBoard
         /// </summary>
         protected override void Initialize()
         {
+            RasterizerState rasterizerState = new RasterizerState();
+            rasterizerState.CullMode = CullMode.None;
+            graphics.GraphicsDevice.RasterizerState = rasterizerState;
+
             quadVertices = new VertexPosition[4];
             quadVertices[0].Position = new Vector3(-1, -1, 0); // left
             quadVertices[1].Position = new Vector3(-1, 1, 0); // up left
@@ -143,7 +147,7 @@ namespace BillBoard
                 v = Vector3.Transform(v, forwardMovement);
 
                 // right-hand rules, supposed that the +Z value is going in front on the screen
-
+                cameraPosition.Z += v.Z;
                 cameraPosition.X += v.X;
 
             }
@@ -156,7 +160,7 @@ namespace BillBoard
                 v = Vector3.Transform(v, forwardMovement);
 
                 // right-hand rules, supposed that the +Z value is going in front on the screen
-
+                cameraPosition.Z += v.Z;
                 cameraPosition.X += v.X;
 
             }
