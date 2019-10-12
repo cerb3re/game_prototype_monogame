@@ -24,3 +24,9 @@ C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\o
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\cube.xnb
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\wall.xnb
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\wall_0.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\Anim_char7_idle_01.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\Anim_char7_idle_02.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\Anim_char7_idle_03.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\Anim_char7_idle_04.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\Anim_char7_idle_05.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\Anim_char7_idle_06.xnb

@@ -14,9 +14,10 @@ namespace BillBoard
 
         private Model cubeModel;
 
-        VertexPosition[] quadVertices; // vector
-        BasicEffect mySpriteEffect;
+        VertexPositionNormalTexture[] quadVertices; // vector
+        AlphaTestEffect mySpriteEffect;
 
+        private Texture2D monsterTexture;
         private Vector3 cameraPosition;
 
         private Matrix modelMatrix; // world
@@ -24,6 +25,7 @@ namespace BillBoard
         private Matrix projection;
 
         private float camDirection = 0;
+        
 
         public Game1()
         {
@@ -43,11 +45,17 @@ namespace BillBoard
             rasterizerState.CullMode = CullMode.None;
             graphics.GraphicsDevice.RasterizerState = rasterizerState;
 
-            quadVertices = new VertexPosition[4];
+            quadVertices = new VertexPositionNormalTexture[4];
             quadVertices[0].Position = new Vector3(-1, -1, 0); // left
             quadVertices[1].Position = new Vector3(-1, 1, 0); // up left
             quadVertices[2].Position = new Vector3(1, -1, 0); // down right
             quadVertices[3].Position = new Vector3(1, 1, 0); // up right
+
+            // the texture coordinate are in (u,v) format
+            quadVertices[0].TextureCoordinate = new Vector2(0, 1);
+            quadVertices[1].TextureCoordinate = new Vector2(0, 0);
+            quadVertices[2].TextureCoordinate = new Vector2(1, 1);
+            quadVertices[3].TextureCoordinate = new Vector2(1, 0);
 
             modelMatrix = Matrix.Identity;
 
@@ -72,9 +80,11 @@ namespace BillBoard
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
+            monsterTexture = Content.Load<Texture2D>("Anim_char7_idle_01");
             cubeModel = Content.Load<Model>("cube");
-            mySpriteEffect = new BasicEffect(GraphicsDevice)
+            mySpriteEffect = new AlphaTestEffect(GraphicsDevice)
             {
+                Texture = monsterTexture,
                 FogEnabled = true,
                 FogStart = 2,
                 FogEnd = 20
@@ -207,7 +217,7 @@ namespace BillBoard
 
         }
 
-        private void Draw3DSprite(VertexPosition[] quad, Matrix world, Matrix vue, Matrix projection)
+        private void Draw3DSprite(VertexPositionNormalTexture[] quad, Matrix world, Matrix vue, Matrix projection)
         {
             mySpriteEffect.View = view;
             mySpriteEffect.Projection = projection;
@@ -232,7 +242,7 @@ namespace BillBoard
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.CornflowerBlue);
+            GraphicsDevice.Clear(Color.Black);
 
             Draw3DSprite(quadVertices, Matrix.Identity, view, projection);
             //DrawModel(cubeModel, modelMatrix, view, projection);
