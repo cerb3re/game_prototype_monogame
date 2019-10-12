@@ -25,7 +25,8 @@ namespace BillBoard
         private Matrix projection;
 
         private float camDirection = 0;
-        
+
+        MouseState originMouseState;
 
         public Game1()
         {
@@ -67,6 +68,9 @@ namespace BillBoard
                 1f,
                 100f
                 );
+
+            CenterMouse();
+            originMouseState = Mouse.GetState();
 
             base.Initialize();
         }
@@ -112,6 +116,15 @@ namespace BillBoard
                 Exit();
 
             bool shift = Keyboard.GetState().IsKeyDown(Keys.LeftShift) || Keyboard.GetState().IsKeyDown(Keys.RightShift);
+
+            MouseState currentMouseState = Mouse.GetState();
+
+            if (currentMouseState != originMouseState)
+            {
+                float differenceX = currentMouseState.X - originMouseState.X;
+                camDirection -= 0.001f * differenceX;
+                CenterMouse();
+            }
 
             // Rotate Camera with keyboard
             if (Keyboard.GetState().IsKeyDown(Keys.Q) && shift)  // left
@@ -217,11 +230,17 @@ namespace BillBoard
 
         }
 
-        private void Draw3DSprite(VertexPositionNormalTexture[] quad, Matrix world, Matrix vue, Matrix projection)
+        private void Draw3DSprite(VertexPositionNormalTexture[] quad,Vector3 quadPosition,Texture2D texture, Matrix vue, Matrix projection)
         {
             mySpriteEffect.View = view;
             mySpriteEffect.Projection = projection;
-            mySpriteEffect.World = world;
+
+            Vector3 directionVector = Vector3.Normalize(quadPosition - cameraPosition);
+            Matrix lookAt = Matrix.CreateWorld(quadPosition, directionVector, Vector3.Up);
+
+            mySpriteEffect.World = lookAt;
+
+            mySpriteEffect.Texture = texture;
 
             foreach(var pass in mySpriteEffect.CurrentTechnique.Passes)
             {
@@ -236,6 +255,11 @@ namespace BillBoard
             }
         }
 
+        private void CenterMouse()
+        {
+            Mouse.SetPosition(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2);
+        }
+
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -243,8 +267,9 @@ namespace BillBoard
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.Black);
+            this.GraphicsDevice.SamplerStates[0] = SamplerState.PointClamp;
 
-            Draw3DSprite(quadVertices, Matrix.Identity, view, projection);
+            Draw3DSprite(quadVertices, Vector3.Zero, monsterTexture, view, projection);
             //DrawModel(cubeModel, modelMatrix, view, projection);
 
             base.Draw(gameTime);
