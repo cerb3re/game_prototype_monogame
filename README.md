@@ -4,6 +4,6 @@
 - Pictures notions
 - rotations notions
 - BillBoard notions
-![alt text](https://github.com/cerb3re/game_prototype_monogame/blob/master/BillBoard/demo.jpg)<br/>
+![alt text](https://github.com/cerb3re/game_prototype_monogame/blob/master/BillBoard/pic/demo.jpg)<br/>
 
 `T.CHENIER @ 2019`
