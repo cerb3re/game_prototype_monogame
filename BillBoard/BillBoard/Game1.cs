@@ -109,20 +109,59 @@ namespace BillBoard
                 camDirection -= .01f;
             }
 
-            // Move camera up & down
             if (Keyboard.GetState().IsKeyDown(Keys.Z) && !shift)
+            {
+                Matrix forwardMovement = Matrix.CreateRotationY(camDirection);
+                Vector3 v = new Vector3(0, 0, -.1f);
+                v = Vector3.Transform(v, forwardMovement);
+
+                // right-hand rules, supposed that the +Z value is going in front on the screen
+         
+                cameraPosition.Z += v.Z; 
+                cameraPosition.X += v.X;
+
+            }
+
+            if (Keyboard.GetState().IsKeyDown(Keys.S) && !shift)
             {
                 Matrix forwardMovement = Matrix.CreateRotationY(camDirection);
                 Vector3 v = new Vector3(0, 0, .1f);
                 v = Vector3.Transform(v, forwardMovement);
 
-                // right-hand rule, supposed that the +Z value is going in front on the screen
-         
-                cameraPosition.Z -= v.Z; 
-                cameraPosition.X -= v.X;
+                // right-hand rules, supposed that the +Z value is going in front on the screen
+
+                cameraPosition.Z += v.Z;
+                cameraPosition.X += v.X;
 
             }
 
+
+            if (Keyboard.GetState().IsKeyDown(Keys.Q) && !shift)
+            {
+                Matrix forwardMovement = Matrix.CreateRotationY(camDirection);
+                Vector3 v = new Vector3(-.1f, 0, 0);
+                v = Vector3.Transform(v, forwardMovement);
+
+                // right-hand rules, supposed that the +Z value is going in front on the screen
+
+                cameraPosition.X += v.X;
+
+            }
+
+
+            if (Keyboard.GetState().IsKeyDown(Keys.D) && !shift)
+            {
+                Matrix forwardMovement = Matrix.CreateRotationY(camDirection);
+                Vector3 v = new Vector3(.1f, 0, 0);
+                v = Vector3.Transform(v, forwardMovement);
+
+                // right-hand rules, supposed that the +Z value is going in front on the screen
+
+                cameraPosition.X += v.X;
+
+            }
+
+            // Move camera up & down
             if (Keyboard.GetState().IsKeyDown(Keys.Up))
             {
                 cameraPosition += new Vector3(0, .05f, 0);
