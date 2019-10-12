@@ -17,7 +17,8 @@ namespace BillBoard
         VertexPositionNormalTexture[] quadVertices; // vector
         AlphaTestEffect mySpriteEffect;
 
-        private Texture2D monsterTexture;
+        //private Texture2D monsterTexture;
+        private FrameAnimation monster;
         private Vector3 cameraPosition;
 
         private Matrix modelMatrix; // world
@@ -84,11 +85,18 @@ namespace BillBoard
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            monsterTexture = Content.Load<Texture2D>("Anim_char7_idle_01");
+            //monsterTexture = Content.Load<Texture2D>("Anim_char7_idle_01");
+            monster = new FrameAnimation(100);
+
+            for (int i = 1; i <= 6; i++)
+            {
+                monster.AddTexture(Content.Load<Texture2D>("Anim_char7_idle_0" + i));
+            }
+
             cubeModel = Content.Load<Model>("cube");
             mySpriteEffect = new AlphaTestEffect(GraphicsDevice)
             {
-                Texture = monsterTexture,
+                Texture = monster.GetTexture(),
                 FogEnabled = true,
                 FogStart = 2,
                 FogEnd = 20
@@ -207,6 +215,8 @@ namespace BillBoard
                 Vector3.Up
                 );
 
+            monster.Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -269,7 +279,7 @@ namespace BillBoard
             GraphicsDevice.Clear(Color.Black);
             this.GraphicsDevice.SamplerStates[0] = SamplerState.PointClamp;
 
-            Draw3DSprite(quadVertices, Vector3.Zero, monsterTexture, view, projection);
+            Draw3DSprite(quadVertices, Vector3.Zero, monster.GetTexture(), view, projection);
             //DrawModel(cubeModel, modelMatrix, view, projection);
 
             base.Draw(gameTime);
