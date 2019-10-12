@@ -27,6 +27,20 @@ namespace BillBoard
 
         private float camDirection = 0;
 
+        int[,] mapData = new int[,]
+        {
+            { 1,1,1,1,1,1,1,1,1,1 },
+            { 1,0,2,0,0,0,0,1,1,1 },
+            { 1,0,0,0,0,2,0,0,0,1 },
+            { 1,1,0,1,1,1,0,1,0,1 },
+            { 1,1,0,1,1,1,2,1,2,1 },
+            { 1,1,0,1,1,1,0,1,1,1 },
+            { 1,0,0,2,0,0,0,0,0,1 },
+            { 1,0,1,1,1,1,0,1,0,1 },
+            { 1,2,0,0,0,1,0,0,2,1 },
+            { 1,0,1,1,1,1,1,1,1,1 }
+        };
+
         MouseState originMouseState;
 
         public Game1()
@@ -276,11 +290,31 @@ namespace BillBoard
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            GraphicsDevice.Clear(Color.Black);
+            GraphicsDevice.Clear(Color.CornflowerBlue);
             this.GraphicsDevice.SamplerStates[0] = SamplerState.PointClamp;
 
-            Draw3DSprite(quadVertices, Vector3.Zero, monster.GetTexture(), view, projection);
-            //DrawModel(cubeModel, modelMatrix, view, projection);
+            int mapPosX = -10;
+            int mapPosZ = -20;
+
+            for (int line = 0; line < 10; line++)
+            {
+                for (int column = 0; column < 10; column++)
+                {
+                    int id = mapData[line, column];
+                    int x = (column * 2) + mapPosX;
+                    int z = (line * 2) + mapPosZ;
+
+                    if (id == 1)
+                    {
+                        Matrix wallMatrix = Matrix.CreateWorld(new Vector3(x, 0, z), Vector3.Forward, Vector3.Up);
+                        DrawModel(cubeModel, wallMatrix, view, projection);
+                    }
+                    else if (id == 2)
+                    {
+                        Draw3DSprite(quadVertices, new Vector3(x, 0, z), monster.GetTexture(), view, projection);
+                    }
+                }
+            }
 
             base.Draw(gameTime);
         }

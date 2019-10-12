@@ -3,7 +3,7 @@
   <SourceFile>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/BillBoard/BillBoard/Content/wall.jpg</SourceFile>
   <SourceTime>2017-11-10T05:22:40+01:00</SourceTime>
   <DestFile>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/BillBoard/BillBoard/Content/bin/Windows/wall_0.xnb</DestFile>
-  <DestTime>2019-10-11T16:44:31.8920423+02:00</DestTime>
+  <DestTime>2019-10-13T00:44:15.2813418+02:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
@@ -30,7 +30,7 @@
   </Parameters>
   <Parameters>
     <Key>TextureFormat</Key>
-    <Value>Compressed</Value>
+    <Value>Color</Value>
   </Parameters>
   <Dependencies />
   <BuildAsset />
