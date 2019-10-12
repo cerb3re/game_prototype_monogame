@@ -69,6 +69,12 @@ namespace BillBoard
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
             cubeModel = Content.Load<Model>("cube");
+            mySpriteEffect = new BasicEffect(GraphicsDevice)
+            {
+                FogEnabled = true,
+                FogStart = 2,
+                FogEnd = 20
+            };
             // TODO: use this.Content to load your game content here
         }
 
@@ -145,6 +151,25 @@ namespace BillBoard
 
         }
 
+        private void Draw3DSprite(VertexPosition[] quad, Matrix world, Matrix vue, Matrix projection)
+        {
+            mySpriteEffect.View = view;
+            mySpriteEffect.Projection = projection;
+            mySpriteEffect.World = world;
+
+            foreach(var pass in mySpriteEffect.CurrentTechnique.Passes)
+            {
+                pass.Apply();
+
+                graphics.GraphicsDevice.DrawUserPrimitives(
+                    PrimitiveType.TriangleStrip,
+                    quad,
+                    0,
+                    2
+                    );
+            }
+        }
+
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
@@ -153,7 +178,8 @@ namespace BillBoard
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
 
-            DrawModel(cubeModel, modelMatrix, view, projection);
+            Draw3DSprite(quadVertices, Matrix.Identity, view, projection);
+            //DrawModel(cubeModel, modelMatrix, view, projection);
 
             base.Draw(gameTime);
         }
