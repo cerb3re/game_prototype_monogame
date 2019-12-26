@@ -17,7 +17,6 @@ C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\b
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\SharpDX.XInput.xml
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\obj\x86\Debug\BillBoard.csprojAssemblyReference.cache
-C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\obj\x86\Debug\BillBoard.csproj.CoreCompileInputs.cache
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\obj\x86\Debug\BillBoard.csproj.CopyComplete
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\obj\x86\Debug\BillBoard.exe
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\obj\x86\Debug\BillBoard.pdb
