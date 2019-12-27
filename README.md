@@ -1,6 +1,7 @@
 # This repository is used for games that I'v made with MonoGame
 
 - 3D Isometric notions
+- Scrolling Background for scrolling parallax notions
 - Pictures notions
 - rotations notions
 - BillBoard notions
