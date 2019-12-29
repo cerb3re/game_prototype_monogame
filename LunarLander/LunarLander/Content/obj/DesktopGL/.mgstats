@@ -1,0 +1,3 @@
+Source File,Dest File,Processor Type,Content Type,Source File Size,Dest File Size,Build Seconds
+"C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/LunarLander/LunarLander/Content/engine.png","C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/LunarLander/LunarLander/Content/bin/DesktopGL/engine.xnb","TextureProcessor","Texture2DContent",273,3085,0,7785202
+"C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/LunarLander/LunarLander/Content/ship.png","C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/LunarLander/LunarLander/Content/bin/DesktopGL/ship.xnb","TextureProcessor","Texture2DContent",414,1285,0,040976

@@ -5,6 +5,7 @@
 - Pictures notions
 - rotations notions
 - BillBoard notions
+- lunar lander for angular, gravity notions
 - Catch picture for click notions
 ![alt text](https://github.com/cerb3re/game_prototype_monogame/blob/master/BillBoard/pic/demo.jpg)<br/>
 - Map editor for live edition notions
