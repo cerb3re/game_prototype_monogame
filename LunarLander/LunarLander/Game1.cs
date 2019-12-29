@@ -19,9 +19,17 @@ namespace LunarLander
 
         internal void Update()
         {
-            Vector2 exponentialVelocity = new Vector2(0, 0.005f);
+            velocity += new Vector2(0, 0.005f);
 
-            velocity += exponentialVelocity;
+            if (Math.Abs(velocity.X) >= speedMax)
+            {
+                velocity = new Vector2((velocity.X < 0 ? 0 - speedMax: speedMax), velocity.Y);
+            }
+            if (Math.Abs(velocity.Y) >= speedMax)
+            {
+                velocity = new Vector2(velocity.Y, (velocity.Y < 0 ? 0 - speedMax: speedMax));
+            }
+
             position += velocity;
         }
     }
@@ -93,7 +101,22 @@ namespace LunarLander
                 lander.engineOn = false;
             }
 
-
+            if (lander.position.X < 0)
+            {
+                lander.position = new Vector2(0, lander.position.Y);
+                lander.velocity = new Vector2(0 - lander.velocity.X, lander.velocity.Y);
+            }
+            if (lander.position.X > GraphicsDevice.Viewport.Width)
+            {
+                lander.position = new Vector2(GraphicsDevice.Viewport.Width, lander.position.Y);
+                lander.velocity = new Vector2(0 - lander.velocity.X, lander.velocity.Y);
+            }
+            if (lander.position.Y > GraphicsDevice.Viewport.Height)
+            {
+                lander.position = new Vector2(lander.position.X, GraphicsDevice.Viewport.Height);
+                lander.velocity = new Vector2(lander.velocity.X, 0 - lander.velocity.Y);
+            }
+         
             lander.Update();
 
             base.Update(gameTime);
