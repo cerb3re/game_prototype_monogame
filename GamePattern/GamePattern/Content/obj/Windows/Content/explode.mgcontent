@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <SourceFile>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/explode.wav</SourceFile>
-  <SourceTime>2014-12-06T18:11:40+01:00</SourceTime>
+  <SourceTime>2019-12-31T14:04:26.5687586+01:00</SourceTime>
   <DestFile>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/bin/Windows/Content/explode.xnb</DestFile>
-  <DestTime>2019-12-30T22:55:28.1853572+01:00</DestTime>
+  <DestTime>2019-12-31T14:12:57.8196882+01:00</DestTime>
   <Importer>WavImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>SoundEffectProcessor</Processor>

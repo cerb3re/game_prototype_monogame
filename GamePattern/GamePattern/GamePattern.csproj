@@ -71,6 +71,7 @@
     <Compile Include="Scenes\SceneGamePlay.cs" />
     <Compile Include="Scenes\SceneMenu.cs" />
     <Compile Include="Sprite.cs" />
+    <Compile Include="Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">

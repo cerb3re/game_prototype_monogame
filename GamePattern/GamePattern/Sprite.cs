@@ -14,6 +14,8 @@ namespace GamePattern
         public Vector2 Position { get; set; }
         public Rectangle BoundingBox { get; set; }
         public Texture2D Texture { get; set; }
+        public float vx;
+        public float vy;
 
         public Sprite(Texture2D texture)
         {
@@ -32,6 +34,8 @@ namespace GamePattern
 
         public void Update(GameTime gameTime)
         {
+            Move(vx, vy);
+
             BoundingBox = new Rectangle(
                 (int)Position.X,
                 (int)Position.Y,
