@@ -29,3 +29,4 @@ C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\b
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\Anim_char7_idle_04.xnb
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\Anim_char7_idle_05.xnb
 C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\bin\Windows\x86\Debug\Content\Anim_char7_idle_06.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\BillBoard\BillBoard\obj\x86\Debug\BillBoard.csproj.CoreCompileInputs.cache

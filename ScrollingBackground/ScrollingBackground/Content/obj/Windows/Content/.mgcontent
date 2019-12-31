@@ -4,11 +4,11 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Dev/Game1/ScrollingBackground/ScrollingBackground/Content/fonts.spritefont</File>
-    <File>C:/Dev/Game1/ScrollingBackground/ScrollingBackground/Content/urban_scrolling0.png</File>
-    <File>C:/Dev/Game1/ScrollingBackground/ScrollingBackground/Content/urban_scrolling1.png</File>
-    <File>C:/Dev/Game1/ScrollingBackground/ScrollingBackground/Content/urban_scrolling2.png</File>
-    <File>C:/Dev/Game1/ScrollingBackground/ScrollingBackground/Content/urban_scrolling3.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/ScrollingBackground/ScrollingBackground/Content/fonts.spritefont</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/ScrollingBackground/ScrollingBackground/Content/urban_scrolling0.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/ScrollingBackground/ScrollingBackground/Content/urban_scrolling1.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/ScrollingBackground/ScrollingBackground/Content/urban_scrolling2.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/ScrollingBackground/ScrollingBackground/Content/urban_scrolling3.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

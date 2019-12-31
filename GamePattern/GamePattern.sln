@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.960
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GamePattern", "GamePattern\GamePattern.csproj", "{246A327A-3409-48B6-BAA7-31E364537125}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{246A327A-3409-48B6-BAA7-31E364537125}.Debug|x64.ActiveCfg = Debug|x64
+		{246A327A-3409-48B6-BAA7-31E364537125}.Debug|x64.Build.0 = Debug|x64
+		{246A327A-3409-48B6-BAA7-31E364537125}.Debug|x86.ActiveCfg = Debug|x86
+		{246A327A-3409-48B6-BAA7-31E364537125}.Debug|x86.Build.0 = Debug|x86
+		{246A327A-3409-48B6-BAA7-31E364537125}.Release|x64.ActiveCfg = Release|x64
+		{246A327A-3409-48B6-BAA7-31E364537125}.Release|x64.Build.0 = Release|x64
+		{246A327A-3409-48B6-BAA7-31E364537125}.Release|x86.ActiveCfg = Release|x86
+		{246A327A-3409-48B6-BAA7-31E364537125}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D522253F-4D5F-4B74-BF7A-932BA32F35F9}
+	EndGlobalSection
+EndGlobal

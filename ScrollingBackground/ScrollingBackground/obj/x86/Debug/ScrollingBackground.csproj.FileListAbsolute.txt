@@ -26,3 +26,31 @@ C:\Dev\Game1\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\Conte
 C:\Dev\Game1\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\Content\urban_scrolling2.xnb
 C:\Dev\Game1\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\Content\urban_scrolling3.xnb
 C:\Dev\Game1\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\Content\fonts.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\Content\fonts.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\Content\urban_scrolling0.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\Content\urban_scrolling1.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\Content\urban_scrolling2.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\Content\urban_scrolling3.xnb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\ScrollingBackground.exe
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\ScrollingBackground.pdb
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\MonoGame.Framework.dll
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.MediaFoundation.dll
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.dll
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.XAudio2.dll
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.DXGI.dll
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.Direct3D11.dll
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.Direct2D1.dll
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.XInput.dll
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\MonoGame.Framework.xml
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.MediaFoundation.xml
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.xml
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.XAudio2.xml
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.DXGI.xml
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.Direct3D11.xml
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.Direct2D1.xml
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\bin\Windows\x86\Debug\SharpDX.XInput.xml
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\obj\x86\Debug\ScrollingBackground.csprojAssemblyReference.cache
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\obj\x86\Debug\ScrollingBackground.csproj.CoreCompileInputs.cache
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\obj\x86\Debug\ScrollingBackground.csproj.CopyComplete
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\obj\x86\Debug\ScrollingBackground.exe
+C:\Users\cerb4\Google Drive\Github\game_prototype_monogame\ScrollingBackground\ScrollingBackground\obj\x86\Debug\ScrollingBackground.pdb

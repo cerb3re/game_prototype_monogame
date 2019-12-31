@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PipelineBuildEvent xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
-  <SourceFile>C:/Dev/Game1/ScrollingBackground/ScrollingBackground/Content/urban_scrolling2.png</SourceFile>
+  <SourceFile>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/ScrollingBackground/ScrollingBackground/Content/urban_scrolling2.png</SourceFile>
   <SourceTime>2016-11-07T07:37:50+01:00</SourceTime>
-  <DestFile>C:/Dev/Game1/ScrollingBackground/ScrollingBackground/Content/bin/Windows/Content/urban_scrolling2.xnb</DestFile>
-  <DestTime>2019-12-27T12:35:47.8913796+01:00</DestTime>
+  <DestFile>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/ScrollingBackground/ScrollingBackground/Content/bin/Windows/Content/urban_scrolling2.xnb</DestFile>
+  <DestTime>2019-12-29T22:46:49.4126388+01:00</DestTime>
   <Importer>TextureImporter</Importer>
   <ImporterTime>2018-12-08T17:35:54+01:00</ImporterTime>
   <Processor>TextureProcessor</Processor>
