@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
@@ -45,6 +46,7 @@ namespace GamePattern
         private KeyboardState oldKeyboardState;
         private Hero hero;
         private Song music;
+        private SoundEffect explode; 
         
         public SceneGamePlay(Main main) : base(main)
         {
@@ -58,6 +60,8 @@ namespace GamePattern
             music = AssetManager.Music;
             MediaPlayer.Play(music);
             MediaPlayer.Volume = 30;
+
+            explode = main.Content.Load<SoundEffect>("explode");
 
             oldKeyboardState = Keyboard.GetState();
 
@@ -122,6 +126,7 @@ namespace GamePattern
                         hero.TouchedBy(m);
                         m.TouchedBy(hero);
                         m.ToRemove = true;
+                        explode.Play();
                     }
                     if (hero.Energy <= 0)
                     {
