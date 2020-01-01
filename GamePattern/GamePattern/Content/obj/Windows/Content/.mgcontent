@@ -4,18 +4,18 @@
   <Platform>Windows</Platform>
   <Config />
   <SourceFiles>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/button.png</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/cool.mp3</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/explode.wav</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/File.spritefont</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/forest.png</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/herosheet.png</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/meteor.png</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/sfx_movement_jump13.wav</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/sfx_movement_jump13_landing.wav</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/ship.png</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/techno.mp3</File>
-    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame/GamePattern/GamePattern/Content/volcano.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/button.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/cool.mp3</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/explode.wav</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/File.spritefont</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/forest.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/herosheet.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/meteor.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/sfx_movement_jump13.wav</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/sfx_movement_jump13_landing.wav</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/ship.png</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/techno.mp3</File>
+    <File>C:/Users/cerb4/Google Drive/Github/game_prototype_monogame (2)/GamePattern/GamePattern/Content/volcano.png</File>
   </SourceFiles>
   <DestFiles>
     <File xsi:nil="true" />

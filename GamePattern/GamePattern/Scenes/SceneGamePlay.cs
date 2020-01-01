@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 using System;
 
 namespace GamePattern
@@ -12,6 +13,14 @@ namespace GamePattern
         public Hero(Texture2D texture) : base(texture)
         {
             this.Energy = 100;
+        }
+
+        public override void TouchedBy(IActor by)
+        {
+            if (by is Meteor)
+            {
+                Energy -= 1;
+            }
         }
     }
 
@@ -35,8 +44,8 @@ namespace GamePattern
     {
         private KeyboardState oldKeyboardState;
         private Hero hero;
-
-
+        private Song music;
+        
         public SceneGamePlay(Main main) : base(main)
         {
 
@@ -44,6 +53,12 @@ namespace GamePattern
 
         public override void Load()
         {
+            AssetManager.Load(main.Content);
+            AssetManager.SongManager("techno");
+            music = AssetManager.Music;
+            MediaPlayer.Play(music);
+            MediaPlayer.Volume = 30;
+
             oldKeyboardState = Keyboard.GetState();
 
             Rectangle screen = main.Window.ClientBounds;
@@ -66,6 +81,8 @@ namespace GamePattern
 
         public override void Unload()
         {
+            MediaPlayer.Stop();
+
             base.Unload();
         }
 
@@ -100,9 +117,21 @@ namespace GamePattern
                         m.vy = 0 - m.vy;
                         m.Position = new Vector2(m.Position.X, Screen.Height - m.BoundingBox.Height);
                     }
-
+                    if (Utils.CollideByBox(m, hero))
+                    {
+                        hero.TouchedBy(m);
+                        m.TouchedBy(hero);
+                        m.ToRemove = true;
+                    }
+                    if (hero.Energy <= 0)
+                    {
+                        hero.Energy = 100;
+                        main.GameState.ChangeScene(GameState.SceneType.Gameover);
+                    }
                 }
             }
+
+            Clean();
 
             if (newkeyboardState.IsKeyDown(Keys.G) && !oldKeyboardState.IsKeyDown(Keys.G))
             {
@@ -121,7 +150,7 @@ namespace GamePattern
 
         public override void Draw(GameTime gameTime)
         {
-            main.spriteBatch.DrawString(AssetManager.MainFont, "GAMEPLAY", Vector2.Zero, Color.White);
+            main.spriteBatch.DrawString(AssetManager.MainFont, "GAMEPLAY\nEnergy : " + hero.Energy , Vector2.Zero, Color.White);
 
             base.Draw(gameTime);
         }

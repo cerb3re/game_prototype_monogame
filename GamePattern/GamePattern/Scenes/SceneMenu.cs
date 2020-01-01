@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace GamePattern
 {
@@ -12,6 +14,8 @@ namespace GamePattern
     {
         KeyboardState oldKeyboardState;
         GamePadState oldGamePadState;
+        private Button button;
+        private Song music;
 
         public SceneMenu(Main main) : base(main)
         {
@@ -20,14 +24,27 @@ namespace GamePattern
 
         public override void Load()
         {
+            AssetManager.Load(main.Content);
+            AssetManager.SongManager("cool");
+            music = AssetManager.Music;
+            MediaPlayer.Play(music);
+            MediaPlayer.IsRepeating = true;
+
+            Rectangle screen = main.Window.ClientBounds;
+            button = new Button(main.Content.Load<Texture2D>("button"));
             oldKeyboardState = Keyboard.GetState();
             oldGamePadState = GamePad.GetState(PlayerIndex.One, GamePadDeadZone.IndependentAxes);
 
+            button.Position = new Vector2((screen.Width / 2) - button.Texture.Width / 2, (screen.Height / 2) - button.Texture.Height / 2);
+            button.OnClick = onClickPlay;
+
+            listActors.Add(button);
             base.Load();
         }
 
         public override void Unload()
         {
+            MediaPlayer.Stop();
             base.Unload();
         }
 
@@ -75,6 +92,11 @@ namespace GamePattern
             main.spriteBatch.DrawString(AssetManager.MainFont, "MENU", Vector2.Zero , Color.White);
 
             base.Draw(gameTime);
+        }
+
+        public void onClickPlay(Button sender)
+        {
+            main.GameState.ChangeScene(GameState.SceneType.Gameplay);
         }
     }
 }

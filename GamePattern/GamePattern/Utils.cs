@@ -19,5 +19,10 @@ namespace GamePattern
         {
             return RandomGen.Next(min, max + 1);
         }
+
+        public static bool CollideByBox(IActor actorOne, IActor actorTwo)
+        {
+            return actorOne.BoundingBox.Intersects(actorTwo.BoundingBox);
+        }
     }
 }

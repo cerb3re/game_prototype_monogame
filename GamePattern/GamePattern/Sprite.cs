@@ -9,17 +9,20 @@ using Microsoft.Xna.Framework.Input;
 
 namespace GamePattern
 {
-    class Sprite : IActor
+    public class Sprite : IActor
     {
         public Vector2 Position { get; set; }
         public Rectangle BoundingBox { get; set; }
         public Texture2D Texture { get; set; }
+        public bool ToRemove { get; set; }
+
         public float vx;
         public float vy;
 
         public Sprite(Texture2D texture)
         {
             this.Texture = texture;
+            this.ToRemove = false;
         }
 
         public void Move(float x, float y)
@@ -27,12 +30,12 @@ namespace GamePattern
             Position = new Vector2(Position.X + x, Position.Y + y);
         }
 
-        public void Draw(SpriteBatch spriteBatch)
+        public virtual void Draw(SpriteBatch spriteBatch)
         {
             spriteBatch.Draw(Texture, BoundingBox, Color.White);
         }
 
-        public void Update(GameTime gameTime)
+        public virtual void Update(GameTime gameTime)
         {
             Move(vx, vy);
 
@@ -42,6 +45,10 @@ namespace GamePattern
                 Texture.Width,
                 Texture.Height
                 );
+        }
+
+        public virtual void TouchedBy(IActor by)
+        {
         }
     }
 }

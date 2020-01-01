@@ -40,6 +40,7 @@ namespace GamePattern
                     CurrentScene = new SceneGamePlay(main);
                     break;
                 case SceneType.Gameover:
+                    CurrentScene = new SceneGameOver(main);
                     break;
                 default:
                     break;

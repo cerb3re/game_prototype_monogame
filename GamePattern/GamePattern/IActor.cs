@@ -15,5 +15,7 @@ namespace GamePattern
 
         void Update(GameTime gameTime);
         void Draw(SpriteBatch spriteBatch);
+        void TouchedBy(IActor by);
+        bool ToRemove { get; set; }
     }
 }

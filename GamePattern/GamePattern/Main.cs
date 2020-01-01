@@ -44,7 +44,8 @@ namespace GamePattern
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            AssetManager.Load("mainfont", Content);
+            AssetManager.Load(Content);
+            AssetManager.FontManager("mainfont");
         }
 
         /// <summary>
